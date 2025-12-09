@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dingtalk-bundle>
+    <id>JerehTalkDemo</id>
+    <version>1.0</version>
+    <description>Please input description of your bunlde</description>
+    <vendor email="Your Email" url="">Your Company Name</vendor>
+
+    <!-- Right-click your mouse and select menu 'Edit bundle.xml' to add more bundle node.-->
+
+</dingtalk-bundle>
+

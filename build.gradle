@@ -1,0 +1,30 @@
+
+buildscript {
+
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$build_gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.alibaba.dingtalk:dingtalk-bundle-gradle-open:$bundle_buildplugin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        mavenCentral()
+        google()
+        jcenter()
+    }
+
+    //指定编码类型
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}

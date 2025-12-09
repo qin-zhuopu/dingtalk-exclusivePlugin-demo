@@ -1,0 +1,7 @@
+*.iml
+.gradle/
+build/
+local.properties
+.idea/
+.DS_Store
+src/main/java/com/android/bundle/demo/temp

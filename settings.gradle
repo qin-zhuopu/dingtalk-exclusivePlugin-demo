@@ -1,0 +1,3 @@
+rootProject.name='JerehTalk-Demo'
+
+include ':lib-bundle-demo'
