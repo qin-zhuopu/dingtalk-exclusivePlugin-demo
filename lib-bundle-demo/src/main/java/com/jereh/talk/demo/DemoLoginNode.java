@@ -34,21 +34,33 @@ public class DemoLoginNode extends EpLoginNode {
 
     @Override
     public void execute(ApiCallback<Void> callback) {
-        if (loginContext == null || loginContext.getActivity() == null) {
+        if (loginContext == null) {
+            // Context is null, so we cannot show a Toast here.
             callback.onException("100", "context invalid");
+            return;
+        }
+
+        if (loginContext.getActivity() == null) {
+            // Activity is null, so we cannot show a Toast here either.
+            // Calling the onException callback is the correct way to handle this error.
+            callback.onException("100", "context invalid: activity is null");
             return;
         }
 
         loginFlowCallback = callback;
 
-        Intent intent = new Intent(loginContext.getActivity(), DemoActivity.class);
-        loginContext.getActivity().startActivityForResult(intent, 10086);
-        loginContext.registerActivityResult(10086, new EpLoginNode.OnActivityResultListener() {
-            @Override
-            public void onActivityResult(int requestCode, int resultCode, Intent data) {
-                Toast.makeText(loginContext.getActivity(), "node get activity result", Toast.LENGTH_SHORT).show();
-            }
-        });
+        Toast.makeText(loginContext.getActivity(), "node get activity result", Toast.LENGTH_SHORT).show();
+        callback.onSuccess(null);
+
+
+//        Intent intent = new Intent(loginContext.getActivity(), DemoActivity.class);
+//        loginContext.getActivity().startActivityForResult(intent, 10086);
+//        loginContext.registerActivityResult(10086, new EpLoginNode.OnActivityResultListener() {
+//            @Override
+//            public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//                Toast.makeText(loginContext.getActivity(), "node get activity result", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 }
 

@@ -4,7 +4,6 @@
     package="com.jereh.talk.demo">
 
     <application>
-
+        <activity android:name=".DemoActivity" />
     </application>
 </manifest>
-
