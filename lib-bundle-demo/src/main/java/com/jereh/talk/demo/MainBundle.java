@@ -1,5 +1,7 @@
 package com.jereh.talk.demo;
 
+import androidx.annotation.NonNull;
+
 import com.alibaba.android.dingtalk.bundle.BundleApplication;
 import com.alibaba.android.dingtalk.bundle.BundleContext;
 import com.alibaba.dingtalk.extension.annotation.Bundle;
@@ -16,15 +18,16 @@ public class MainBundle extends BundleApplication {
         return bundleContext;
     }
 
+    @NonNull
     @Override
     public String getBundleId() {
         return BUNDLE_ID;
     }
 
     @Override
-    public void onApplicationCreate(BundleContext context) {
+    public void onApplicationCreate(@NonNull BundleContext context) {
         super.onApplicationCreate(context);
-        this.bundleContext = context;   // 该行不要删除
+        bundleContext = context;   // 该行不要删除
     }
 }
 
