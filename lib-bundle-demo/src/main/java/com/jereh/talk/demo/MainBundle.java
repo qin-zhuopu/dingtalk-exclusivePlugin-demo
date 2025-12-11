@@ -1,5 +1,7 @@
 package com.jereh.talk.demo;
 
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 
 import com.alibaba.android.dingtalk.bundle.BundleApplication;
@@ -28,6 +30,7 @@ public class MainBundle extends BundleApplication {
     public void onApplicationCreate(@NonNull BundleContext context) {
         super.onApplicationCreate(context);
         bundleContext = context;   // 该行不要删除
+        Toast.makeText(context.getApplication(), "烟台杰瑞onApplicationCreate", Toast.LENGTH_SHORT).show();
     }
 }
 
