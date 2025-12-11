@@ -48,19 +48,19 @@ public class DemoLoginNode extends EpLoginNode {
         }
 
         loginFlowCallback = callback;
-
+//
         Toast.makeText(loginContext.getActivity(), "杰瑞登录扩展点 Prepare", Toast.LENGTH_SHORT).show();
-        callback.onSuccess(null);
+//        callback.onSuccess(null);
 
 
-//        Intent intent = new Intent(loginContext.getActivity(), DemoActivity.class);
-//        loginContext.getActivity().startActivityForResult(intent, 10086);
-//        loginContext.registerActivityResult(10086, new EpLoginNode.OnActivityResultListener() {
-//            @Override
-//            public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//                Toast.makeText(loginContext.getActivity(), "node get activity result", Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        Intent intent = new Intent(loginContext.getActivity(), DemoActivity.class);
+        loginContext.getActivity().startActivityForResult(intent, 10086);
+        loginContext.registerActivityResult(10086, new EpLoginNode.OnActivityResultListener() {
+            @Override
+            public void onActivityResult(int requestCode, int resultCode, Intent data) {
+                Toast.makeText(loginContext.getActivity(), "node get activity result", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
 
