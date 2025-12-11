@@ -49,7 +49,7 @@ public class DemoLoginNode extends EpLoginNode {
 
         loginFlowCallback = callback;
 
-        Toast.makeText(loginContext.getActivity(), "node get activity result", Toast.LENGTH_SHORT).show();
+        Toast.makeText(loginContext.getActivity(), "杰瑞登录扩展点 Prepare", Toast.LENGTH_SHORT).show();
         callback.onSuccess(null);
 
 
