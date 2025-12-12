@@ -6,6 +6,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application>
-        <activity android:name=".DemoActivity" />
+        <activity android:name="com.jereh.talk.demo.DemoActivity" />
     </application>
 </manifest>
