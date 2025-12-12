@@ -2,4 +2,5 @@
 <resources>
     <string name="login_success">Login Success</string>
     <string name="login_error">Login Error</string>
+    <string name="exclusive_enable_open_prepare_login">true</string>
 </resources>

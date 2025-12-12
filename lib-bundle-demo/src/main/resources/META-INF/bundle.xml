@@ -6,6 +6,9 @@
     <vendor email="Your Email" url="">Your Company Name</vendor>
 
     <!-- Right-click your mouse and select menu 'Edit bundle.xml' to add more bundle node.-->
+    <components>
+        <activity class="com.jereh.talk.demo.DemoActivity" />
+    </components>
 
 </dingtalk-bundle>
 
