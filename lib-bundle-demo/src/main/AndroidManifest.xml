@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.jereh.talk.demo">
 
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application>
-        <activity android:name="com.jereh.talk.demo.DemoActivity" />
+        <activity android:name=".DemoActivity" android:exported="false">
+            <meta-data
+                android:name="com.alibaba-inc.check.login.status.resume"
+                android:value="0"/>
+        </activity>
     </application>
 </manifest>
